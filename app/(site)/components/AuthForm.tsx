@@ -1,5 +1,6 @@
 'use client';
 
+import Input from '@/app/components/inputs/Input';
 import React, { useState, useCallback } from 'react'
 import { useForm, FieldValues, SubmitHandler } from 'react-hook-form';
 type Variannt = 'LOGIN' | 'REGISTER'
@@ -45,7 +46,9 @@ export default function AuthForm() {
   return (
     <div className='mt-8 sm:mx-auto sm:w-full sm:max-w-md' >
       <div className='bg-white px-4 py-8 shadow sm:rounded-lg sm-px-10'>
-<form action=''></form>
+        <form className='space-y-6' onSubmit={handleSubmit(onSumbit)}>
+    <Input  id="email" label="Email"  register={register}/>
+        </form>
       </div>
     </div>
   )
